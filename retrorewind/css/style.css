@@ -192,6 +192,7 @@ li {
 /* Button styling */
 .buttons button, .genre-buttons button {
     font-family: var(--body-font);
+    font-size: 1rem;
     color: var(--body-colour);
     padding: 0.5em;
     /* Layout of buttons */
@@ -220,6 +221,7 @@ li {
 /* Styling of personal photo on about page */
 .my-photo {
     width: 40vw;
+    height: auto;
     margin-bottom: 3em;
     border: 2px solid #FFFFFF;
     border-radius: 2rem;
@@ -238,12 +240,6 @@ li {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 1em;
-}
-
-/* Styling for genre button symbols */
-.genre-buttons .symbol {
-    width: min(1rem,20px);
-    height: min(1rem,20px);
 }
 
 /* Centres the last genre button */
@@ -272,8 +268,8 @@ li {
     display: inline-block; 
 
     /* Game photo size*/
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
 
     /* Cover the whole box and centre */ 
     background-size: 100% 100%;
@@ -306,7 +302,7 @@ li {
 
 /* Initially hidden game information overlay that appears when a game photo is hovered over */
 .game-info {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     opacity: 0;
     transition: opacity 0.5s ease-in; /* Animation for the hover effect of the game info opacity */
     padding: 1em; /* Leaves space on sides of box */
@@ -320,7 +316,7 @@ li {
 /* Styling the title of a game */
 .game-title {
     padding-top: 0.5em;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -417,7 +413,7 @@ li {
     }
 
     .nav-link, #game-dropdown{ 
-        font-size: clamp(1.5rem, 2.5vw, 2.7rem);
+        font-size: clamp(1.8rem, 2.5vw, 2.7rem);
         -webkit-text-stroke: 1px var(--neon-colour);
     }
 
@@ -494,6 +490,7 @@ li {
     /* Displays the side logo */
     .side-logo {
         width: 45vw;
+        height: auto;
         display: block;
     }
 
@@ -527,35 +524,34 @@ li {
         font-size: clamp(1.5rem, 2vw, 2.5rem);
         border: 3px solid #FFFFFF;
     }
-    
-    /* Styles the genre button symbols to be 3vw but less than 40px */
-    .genre-buttons .symbol {
-        width: min(3vw,40px);
-        height: min(3vw,40px);
-    }
 
     /* Changes layout of genre games page so there are 3 columns */
     #game-grid {
         grid-template-columns: repeat(3, 1fr); 
     }
 
-    /* Changes game photo size */
+    /* Changes game photo size using clamp to fill the screen appropiately for the device */
     .game-photo {
-        width: 14vw;
-        height: 14vw;
+        width: clamp(10rem, 14vw, 15rem);
+        height: clamp(10rem, 14vw, 15rem);
     }
 
-    .game-info, .game-title {
-        font-size: clamp(0.6rem, 1vw, 1rem);
+    .game-info {
+        font-size: clamp(0.8rem, 1vw, 2rem);
+    }
+
+    .game-title {
+        font-size: clamp(1rem, 1vw, 1.5rem);
     }
 
     #gamesscreen-logo {
         width: 40vw;
     }
 
+    /* Scales the game screen to be the maximum of the two values to responsively size to the device */
     #arcade-screen {
-        height: 54vh;
-        width: 58vw;
+        height: max(20rem, 54vh);
+        width: max(40rem, 58vw);
     }
     
     .controls {
