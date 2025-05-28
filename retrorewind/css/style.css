@@ -326,8 +326,8 @@ li {
     height: auto;
 }
 
-/* The arcade screen where the selected game is displayed */
-#arcade-screen {
+/* The game screen where the selected game is displayed */
+#game-screen {
     border: solid 2px #FFFFFF;
     width: 85vw;
     height: 60vh;
@@ -335,7 +335,7 @@ li {
     border-radius: 2rem;
     position: relative;
 
-    /* The arcade screen glow */
+    /* The game screen glow */
     box-shadow:
     /* White glow */
     0 0 3px #FFFFFF,
@@ -502,7 +502,7 @@ li {
     }
     
     .buttons button {
-        font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+        font-size: clamp(0.9rem, 1.3vw, 1.1rem);
         border: 3px solid #FFFFFF;
     }
 
@@ -549,7 +549,7 @@ li {
     }
 
     /* Scales the game screen to be the maximum of the two values to responsively size to the device */
-    #arcade-screen {
+    #game-screen {
         height: max(20rem, 54vh);
         width: max(40rem, 58vw);
     }
@@ -563,7 +563,7 @@ li {
     }
 
     #credits-container p {
-        font-size: clamp(1rem, 1.5vw, 2rem);
+        font-size: clamp(0.8rem, 1.5vw, 2rem);
     }
 
 }

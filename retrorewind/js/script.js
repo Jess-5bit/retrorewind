@@ -92,8 +92,8 @@ function addGenreButtonClick(genre) {
  */
 function loadGame(game) {
   // Get the container where the game will be displayed
-  const arcadeScreen = document.getElementById('arcade-screen');
-  if (!arcadeScreen) return;
+  const gameScreen = document.getElementById('game-screen');
+  if (!gameScreen) return;
 
   // Get the container where the controls will be
   const gameControls = document.getElementById('game-controls');
@@ -109,7 +109,7 @@ function loadGame(game) {
     iframe.classList.add('game')
     iframe.src = chosengame.url;
     iframe.title = chosengame.title;
-    arcadeScreen.appendChild(iframe);
+    gameScreen.appendChild(iframe);
 
     // Add the controls
     const controlInfo = document.createElement('p');
